@@ -10,6 +10,15 @@ def selectionsort(L):
     temp = list(L)
     result = []
     while (len(temp) > 0):
+        m = min(temp)
+        result.append(m)
+        temp.remove(m)
+    return result
+
+def insertsort(L):
+    temp = list(L)
+    result = []
+    while (len(temp) > 0):
         m = temp.pop(0)
         result.append(m)
         for i in range(1,len(result))[::-1]:

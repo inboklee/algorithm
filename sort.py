@@ -10,7 +10,9 @@ def selectionsort(L):
     temp = list(L)
     result = []
     while (len(temp) > 0):
-        m = min(temp)
+        m = temp.pop(0)
         result.append(m)
-        temp.remove(m)
+        for i in range(1,len(result))[::-1]:
+            if (result[i] < result[i-1]):
+                result[i], result[i-1] = result[i-1], result[i]
     return result

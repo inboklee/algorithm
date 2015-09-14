@@ -13,5 +13,4 @@ def radixsort(L):
                 for i in xrange(len(bucket)):
                         temp = temp + bucket[i]
                         bucket[i] = []
-                print temp
         return temp

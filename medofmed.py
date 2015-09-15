@@ -4,7 +4,6 @@ def medofmed(L):
         med = []
         current = 0
         while (current < len(L)):
-                print current
                 med.append(medofmed(L[current:current+5]))
                 current = current + 5
         return medofmed(med)

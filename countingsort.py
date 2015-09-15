@@ -11,4 +11,8 @@ def countingsort(L, n):
                 if (C[i] > C[i-1]):
                         for j in xrange(C[i-1], C[i]):
                                 L[j] = i-1
+        
+        if (C[n-1] != len(L)):
+                for j in xrange(C[n-1], len(L)):
+                        L[j] = n-1
         return L

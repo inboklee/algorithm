@@ -27,4 +27,12 @@ def randomizedquicksort(L):
                 else:
                         right.append(x)
         return randomizedquicksort(left) + [L[pivot]] + randomizedquicksort(right)
+        
+def randquicksort(L):
+        if (len(L) == 1) or (len(L) == 0):
+                return L
+
+        pivot = int(random.random() * len(L))
+        L[0], L[pivot] = L[pivot], L[0]
+        return quicksort(L)
 

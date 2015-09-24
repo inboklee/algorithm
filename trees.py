@@ -28,3 +28,17 @@ class tree:
                         else:
                                 current.right = node(x)
                                 current.right.parent = current
+        def search(self, x):
+                return self.search_node(self.root, x)
+
+        def search_node(self, current, x):
+                if (current is None):
+                        return False
+                else:
+                        if (current.key == x):
+                                return True
+                        elif (current.key > x):
+                                return self.search_node(current.left, x)
+                        else:
+                                return self.search_node(current.right, x)
+

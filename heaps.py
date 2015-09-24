@@ -1,4 +1,4 @@
-ef fix_minheap_bottom(L, start, k):
+def fix_minheap_bottom(L, start, k):
         while (k > start):
                 parent = int((k-1)/2)
                 if (L[parent] > L[k]):

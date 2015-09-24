@@ -12,6 +12,8 @@ class tree:
         def insert(self, x):
                 if (self.root is None):
                         self.root = node(x)
+                else:
+                        self.insert_node(self.root, x)
 
         def insert_node(self, current, x):
                 if (current.key > x):

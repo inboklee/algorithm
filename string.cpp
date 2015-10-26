@@ -1,4 +1,4 @@
-include <iostream>
+#include <iostream>
 #include <string>
 
 void bruteforce(std::string &T, std::string &P)

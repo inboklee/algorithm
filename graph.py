@@ -29,7 +29,13 @@ def BFS(G, start):
                     isinQueue[e] = True
     return
 
-G = [[], [2,6,8], [1,3,6], [2,4], [3,5], [2,3], [1,2,7,8], [6], [1,6]]
+def FloydWarshall(G):
+    n = len(G)
+    dist = list(G)
+    for k in xrange(n):
+        for i in xrange(n):
+            for j in xrange(n):
+                if (dist[i][j] > dist[i][k] + dist[k][j]):
+                    dist[i][j] = dist[i][k] + dist[k][j]
+    return dist
 
-DFS(G, 1)
-BFS(G, 1)
